@@ -15,6 +15,22 @@ namespace UnitOfWorkExample.Services
         {
             _unitOfWorkFactory = unitOfWorkFactory;
         }
+
+        public async Task<UserDto> CheckUser(string username, string password)
+        {
+            using (var unitOfWork = _unitOfWorkFactory.Create())
+            {
+                var users = await unitOfWork.Repository().FindAsync<User>(x => x.Username == username && x.Password == password);
+                if (users.FirstOrDefault() == null)
+                {
+                    return null;
+                }
+                var userKojiPostoji = users.FirstOrDefault();
+
+                return new UserDto(userKojiPostoji);
+            }
+        }
+
         public async Task<List<UserDto>> GetUsersAsync(string term)
         {
             using (var unitOfWork = _unitOfWorkFactory.Create())

@@ -8,25 +8,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UnitOfWorkExample.Services;
 using UnitOfWorkExample.UnitOfWork.Models;
 
 namespace AnalitikaAnketa
 {
     public partial class Form1 : Form
     {
+        private readonly IUserService _userService;
         LogOn frm2;
         User user; 
 
-        public Form1()
+        public Form1(IUserService userService)
         {
+            this._userService = userService;
             InitializeComponent();
         }
         
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            frm2 = new LogOn(user);
-            frm2.ShowDialog();
-            tbUser.Text = frm2.getUser().Username;
+            if (user != null)
+            {
+                MessageBox.Show("Vec ste ulogovani");
+            }
+            else
+            {
+                frm2 = new LogOn(user, _userService);
+                frm2.ShowDialog();
+                user = frm2.getUser();
+                tbUser.Text = user.Name;
+            }
         }
 
     }

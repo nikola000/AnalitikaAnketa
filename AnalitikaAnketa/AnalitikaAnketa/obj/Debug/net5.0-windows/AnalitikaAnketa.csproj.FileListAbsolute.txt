@@ -27,3 +27,6 @@ C:\Users\Nikola\AnalitikaAnketa\AnalitikaAnketa\AnalitikaAnketa\bin\Debug\net5.0
 C:\Users\Nikola\AnalitikaAnketa\AnalitikaAnketa\AnalitikaAnketa\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Nikola\AnalitikaAnketa\AnalitikaAnketa\AnalitikaAnketa\obj\Debug\net5.0-windows\AnalitikaAnketa.csproj.CopyComplete
 C:\Users\Nikola\AnalitikaAnketa\AnalitikaAnketa\AnalitikaAnketa\obj\Debug\net5.0-windows\AnalitikaAnketa.Migrations.InitialCreate.resources
+C:\Users\Nikola\AnalitikaAnketa\AnalitikaAnketa\AnalitikaAnketa\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Nikola\AnalitikaAnketa\AnalitikaAnketa\AnalitikaAnketa\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Nikola\AnalitikaAnketa\AnalitikaAnketa\AnalitikaAnketa\obj\Debug\net5.0-windows\AnalitikaAnketa.Migrations.AddedIsAdministratorOnUser.resources
