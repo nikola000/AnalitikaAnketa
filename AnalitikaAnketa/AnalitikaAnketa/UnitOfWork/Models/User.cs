@@ -2,6 +2,7 @@
 {
     public class User
     {
+        public int Id { get; set; }
         // Add model properties here
         public string Username { get; set; }
         public string Password { get; set; }

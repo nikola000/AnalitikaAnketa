@@ -13,7 +13,7 @@ namespace AnalitikaAnketa.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202107031643468_InitialCreate"; }
+            get { return "202107031701309_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

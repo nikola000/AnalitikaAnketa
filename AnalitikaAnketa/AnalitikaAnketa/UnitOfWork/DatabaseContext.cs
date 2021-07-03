@@ -1,12 +1,15 @@
 ﻿using System.Data.Entity;
+using UnitOfWorkExample.UnitOfWork.Models;
 
 namespace UnitOfWorkExample.UnitOfWork
 {
     public class DatabaseContext : DbContext, IDatabaseContext
     {
-        public DatabaseContext() : base("Server=localhost\\SQLEXPRESS01;Database=master;Trusted_Connection=True;")
+        public DbSet<User> Users { get; set; }
+        public DatabaseContext() : base("Server=localhost\\SQLEXPRESS01;Database=AnalitikaAnketaDB;Trusted_Connection=True;")
         {
-            Database.SetInitializer<DatabaseContext>(null);
+            Database.SetInitializer<DatabaseContext>(new CreateDatabaseIfNotExists<DatabaseContext>());
+            //Database.SetInitializer<DatabaseContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
