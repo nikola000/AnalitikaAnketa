@@ -33,8 +33,8 @@ namespace AnalitikaAnketa.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _user.Username = textBox1.Text;
-            _user.Password = textBox2.Text;
+            _user.Username = tbUser.Text;
+            _user.Password = tbPassword.Text;
             this.Dispose();
         }
     }
