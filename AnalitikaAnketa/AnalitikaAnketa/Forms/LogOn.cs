@@ -38,7 +38,7 @@ namespace AnalitikaAnketa.Forms
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            UserDto user = await _userService.CheckUser(textBox1.Text, textBox2.Text);
+            UserDto user = await _userService.CheckUser(tbUser.Text, tbPassword.Text);
             if (user==null)
             {
                 MessageBox.Show("Unet je pogresan username ili password","Neuspelo logovanje",MessageBoxButtons.OK);
