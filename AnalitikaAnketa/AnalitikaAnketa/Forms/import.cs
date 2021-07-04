@@ -17,32 +17,20 @@ namespace AnalitikaAnketa.Forms
             InitializeComponent();
         }
 
-        private  void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-
-
             openFD.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
 
             if (openFD.ShowDialog() == DialogResult.OK)
-            {     
-           
-                txtIzborFajla.Text = openFD.FileName; 
-
+            {
+                txtIzborFajla.Text = openFD.FileName;
             }
-        
-
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void bUcitaj_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void openFD_FileOk(object sender, CancelEventArgs e)
-        {
-            
-        }
     }
-    }
+}
 
