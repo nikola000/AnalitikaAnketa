@@ -31,6 +31,7 @@ namespace AnalitikaAnketa
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAdministrator = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
@@ -39,7 +40,8 @@ namespace AnalitikaAnketa
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.tsmiAdministrator});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -53,10 +55,17 @@ namespace AnalitikaAnketa
             this.toolStripMenuItem1.Size = new System.Drawing.Size(74, 20);
             this.toolStripMenuItem1.Text = "Logovanje";
             // 
+            // tsmiAdministrator
+            // 
+            this.tsmiAdministrator.Name = "tsmiAdministrator";
+            this.tsmiAdministrator.Size = new System.Drawing.Size(64, 20);
+            this.tsmiAdministrator.Text = "Korisnici";
+            this.tsmiAdministrator.Visible = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(621, 39);
+            this.label1.Location = new System.Drawing.Point(574, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 15);
             this.label1.TabIndex = 2;
@@ -64,10 +73,10 @@ namespace AnalitikaAnketa
             // 
             // tbUser
             // 
-            this.tbUser.Location = new System.Drawing.Point(688, 36);
+            this.tbUser.Location = new System.Drawing.Point(641, 36);
             this.tbUser.Name = "tbUser";
             this.tbUser.ReadOnly = true;
-            this.tbUser.Size = new System.Drawing.Size(100, 23);
+            this.tbUser.Size = new System.Drawing.Size(147, 23);
             this.tbUser.TabIndex = 3;
             // 
             // Form1
@@ -93,6 +102,7 @@ namespace AnalitikaAnketa
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAdministrator;
     }
 }
 

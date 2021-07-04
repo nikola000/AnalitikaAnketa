@@ -31,6 +31,8 @@ namespace UnitOfWorkExample.Services
             }
         }
 
+
+
         public async Task<List<UserDto>> GetUsersAsync(string term)
         {
             using (var unitOfWork = _unitOfWorkFactory.Create())
@@ -39,5 +41,16 @@ namespace UnitOfWorkExample.Services
                 return users.Select(user => new UserDto(user.Name)).ToList();
             }
         }
+        public List<User> GetUsersDataGrid() 
+        {
+            using (DatabaseContext db = new DatabaseContext())
+            {
+                return db.Users.ToList();
+            }
+
+        }
+
+
+
     }
 }
