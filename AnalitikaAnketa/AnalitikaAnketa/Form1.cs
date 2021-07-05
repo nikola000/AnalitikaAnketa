@@ -17,7 +17,8 @@ namespace AnalitikaAnketa
     {
         private readonly IUserService _userService;
         LogOn frm2;
-        User user; 
+        User user;
+        import frm3;
 
         public Form1(IUserService userService)
         {
@@ -26,19 +27,33 @@ namespace AnalitikaAnketa
         }
         
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            if (user != null)
+        { 
+            if (e.ClickedItem.Name == toolStripMenuItem1.Name)
             {
-                MessageBox.Show("Vec ste ulogovani");
+                    if (user != null)
+                    {
+                        MessageBox.Show("Vec ste ulogovani");
+                    }
+                    else
+                    {
+                        frm2 = new LogOn(user, _userService);
+                        frm2.ShowDialog();
+                        user = frm2.getUser();
+                        tbUser.Text = user.Name;
+                    }
             }
-            else
+            if (e.ClickedItem.Name == ToolStripMenuItem2.Name)
             {
-                frm2 = new LogOn(user, _userService);
-                frm2.ShowDialog();
-                user = frm2.getUser();
-                tbUser.Text = user.Name;
+                frm3 = new import();
+                frm3.ShowDialog();
+
             }
         }
 
+        private void inToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            
+        }
     }
 }

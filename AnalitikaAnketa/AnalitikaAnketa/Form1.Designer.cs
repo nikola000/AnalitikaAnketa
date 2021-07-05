@@ -32,6 +32,7 @@ namespace AnalitikaAnketa
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
@@ -43,13 +44,14 @@ namespace AnalitikaAnketa
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.ToolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -62,6 +64,13 @@ namespace AnalitikaAnketa
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(74, 20);
             this.toolStripMenuItem1.Text = "Logovanje";
+            // 
+            // ToolStripMenuItem2
+            // 
+            this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(147, 20);
+            this.ToolStripMenuItem2.Text = "Import podataka Ankete";
+            this.ToolStripMenuItem2.Click += new System.EventHandler(this.inToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -106,6 +115,7 @@ namespace AnalitikaAnketa
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem2;
     }
 }
 
