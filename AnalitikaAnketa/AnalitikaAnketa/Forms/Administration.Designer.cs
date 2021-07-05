@@ -38,18 +38,21 @@ namespace AnalitikaAnketa.Forms
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(614, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 375);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(222, 325);
+            this.btnAddUser.Location = new System.Drawing.Point(12, 28);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(92, 42);
+            this.btnAddUser.Size = new System.Drawing.Size(148, 23);
             this.btnAddUser.TabIndex = 1;
             this.btnAddUser.Text = "Dodaj novog korisnika";
             this.btnAddUser.UseVisualStyleBackColor = true;
@@ -57,9 +60,10 @@ namespace AnalitikaAnketa.Forms
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(378, 325);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(651, 34);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(92, 42);
+            this.btnSave.Size = new System.Drawing.Size(137, 23);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Sacuvaj promene";
             this.btnSave.UseVisualStyleBackColor = true;
