@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity;
 using System.Windows.Forms;
-using UnitOfWorkExample.Services;
-using UnitOfWorkExample.Services.Dto;
 using UnitOfWorkExample.UnitOfWork;
 
 namespace AnalitikaAnketa.Forms
@@ -16,14 +8,10 @@ namespace AnalitikaAnketa.Forms
     public partial class Administration : Form
     {
         AddingUser AddNewUser;
-        private readonly IUserService _userService;
+        DatabaseContext context = new DatabaseContext();
+
         public Administration()
         {
-            InitializeComponent();
-        }
-        public Administration(IUserService userService)
-        {
-            this._userService = userService;
             InitializeComponent();
         }
 
@@ -42,12 +30,18 @@ namespace AnalitikaAnketa.Forms
 
         private void SetDataGrid()
         {
-            dataGridView1.DataSource = _userService.GetUsersDataGrid();
+            context.Users.Load();
+            dataGridView1.DataSource = context.Users.Local.ToBindingList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            int result = context.SaveChanges();
 
+            if (result > 0)
+            {
+                MessageBox.Show("Izmene su uspesno sacuvane");
+            }
         }
     }
 }

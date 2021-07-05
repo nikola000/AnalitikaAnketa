@@ -21,6 +21,11 @@ namespace UnitOfWorkExample.UnitOfWork
             return await _databaseContext.SaveChangesAsync();
         }
 
+        public int SaveChanges()
+        {
+            return _databaseContext.SaveChanges();
+        }
+
         public void Dispose()
         {
             _databaseContext.Dispose();
@@ -29,6 +34,11 @@ namespace UnitOfWorkExample.UnitOfWork
         public Task CommitAsync()
         {
             return _databaseContext.SaveChangesAsync();
+        }
+
+        public int Commit()
+        {
+            return _databaseContext.SaveChanges();
         }
     }
 }

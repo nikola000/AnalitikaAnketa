@@ -1,12 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using UnitOfWorkExample.Services.Dto;
 using UnitOfWorkExample.UnitOfWork;
 using UnitOfWorkExample.UnitOfWork.Models;
-using System.Linq;
-using System.Data.Entity;
-using System.ComponentModel;
 
 namespace UnitOfWorkExample.Services
 {
@@ -19,7 +14,7 @@ namespace UnitOfWorkExample.Services
             _unitOfWorkFactory = unitOfWorkFactory;
         }
 
-        public UserDto CheckUser(string username, string password)
+        public User CheckUser(string username, string password)
         {
             using (var unitOfWork = _unitOfWorkFactory.Create())
             {
@@ -28,34 +23,18 @@ namespace UnitOfWorkExample.Services
                 {
                     return null;
                 }
-                var userKojiPostoji = users.FirstOrDefault();
 
-                return new UserDto(userKojiPostoji);
+                return users.FirstOrDefault();
             }
         }
 
-        public List<UserDto> GetUsersAsync(string term)
+        public List<User> GetUsersAsync(string term)
         {
             using (var unitOfWork = _unitOfWorkFactory.Create())
             {
                 var users = unitOfWork.Repository().Find<User>(x => x.Name.Contains(term));
-                return users.Select(user => new UserDto(user.Name)).ToList();
+                return users.ToList();
             }
         }
-
-        public BindingList<User> GetUsersDataGrid()
-        {
-            //using (var unitOfWork = _unitOfWorkFactory.Create())
-            //{
-            //    var users = unitOfWork.Repository().All<User>();
-            //    return users.Select(user => new UserDto(user)).ToList();
-            //}
-            using (DatabaseContext db = new DatabaseContext())
-            {
-                var r = db.Users.Local.ToList();
-                return db.Users.Local.ToBindingList();
-            }
-        }
-
     }
 }

@@ -1,15 +1,6 @@
 ﻿using AnalitikaAnketa.Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnitOfWorkExample.Services;
-using UnitOfWorkExample.Services.Dto;
 using UnitOfWorkExample.UnitOfWork.Models;
 
 namespace AnalitikaAnketa
@@ -18,7 +9,7 @@ namespace AnalitikaAnketa
     {
         private readonly IUserService _userService;
         LogOn frm2;
-        UserDto user;
+        User user;
         import frm3;
         Administration frmAdmin;
 
@@ -59,7 +50,7 @@ namespace AnalitikaAnketa
             }
             if (e.ClickedItem.Name == tsmiAdministrator.Name)
             {
-                frmAdmin = new Administration(_userService);
+                frmAdmin = new Administration();
                 frmAdmin.ShowDialog();
             }
         }

@@ -1,29 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnitOfWorkExample.UnitOfWork.Models;
 using UnitOfWorkExample.Services;
-using UnitOfWorkExample.Services.Dto;
 
 namespace AnalitikaAnketa.Forms
 {
     public partial class LogOn : Form
     {
         private readonly IUserService _userService;
-        UserDto _user;
+        User _user;
 
         public LogOn()
         {
             InitializeComponent();
         }
 
-        public LogOn(UserDto user, IUserService userService)
+        public LogOn(User user, IUserService userService)
         {
             this._user = user;
             this._userService = userService;
@@ -31,7 +23,7 @@ namespace AnalitikaAnketa.Forms
             InitializeComponent();
         }
 
-        public UserDto getUser()
+        public User getUser()
         {
             return _user;
         }

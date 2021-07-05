@@ -7,5 +7,6 @@ namespace UnitOfWorkExample.UnitOfWork
     {
         IGenericRepository Repository();
         Task CommitAsync();
+        int Commit();
     }
 }
