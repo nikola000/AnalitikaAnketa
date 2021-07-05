@@ -19,6 +19,7 @@ namespace AnalitikaAnketa
         LogOn frm2;
         User user;
         import frm3;
+        podesavanja frm4;
 
         public Form1(IUserService userService)
         {
@@ -48,12 +49,25 @@ namespace AnalitikaAnketa
                 frm3.ShowDialog();
 
             }
+            if (e.ClickedItem.Name == podešavanjaToolStripMenuItem.Name)
+            {
+                frm4 = new podesavanja();
+                frm4.ShowDialog(); 
+
+            
+            }
+
         }
 
         private void inToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
             
+        }
+
+        private void podešavanjaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

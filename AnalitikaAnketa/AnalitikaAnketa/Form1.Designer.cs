@@ -35,6 +35,7 @@ namespace AnalitikaAnketa
             this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.tbUser = new System.Windows.Forms.TextBox();
+            this.podešavanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@ namespace AnalitikaAnketa
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.ToolStripMenuItem2});
+            this.ToolStripMenuItem2,
+            this.podešavanjaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -89,6 +91,13 @@ namespace AnalitikaAnketa
             this.tbUser.Size = new System.Drawing.Size(100, 23);
             this.tbUser.TabIndex = 3;
             // 
+            // podešavanjaToolStripMenuItem
+            // 
+            this.podešavanjaToolStripMenuItem.Name = "podešavanjaToolStripMenuItem";
+            this.podešavanjaToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.podešavanjaToolStripMenuItem.Text = "Podešavanja";
+            this.podešavanjaToolStripMenuItem.Click += new System.EventHandler(this.podešavanjaToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -116,6 +125,7 @@ namespace AnalitikaAnketa
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem podešavanjaToolStripMenuItem;
     }
 }
 
