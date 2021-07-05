@@ -32,6 +32,7 @@ namespace AnalitikaAnketa.Forms
         {
             context.Users.Load();
             dataGridView1.DataSource = context.Users.Local.ToBindingList();
+            InitializeDataGridView();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -42,6 +43,19 @@ namespace AnalitikaAnketa.Forms
             {
                 MessageBox.Show("Izmene su uspesno sacuvane");
             }
+        }
+        private void InitializeDataGridView() 
+        {
+            dataGridView1.Columns[1].HeaderText = "Korisnicko ime";
+            dataGridView1.Columns[3].HeaderText = "Ime";
+            dataGridView1.Columns[4].HeaderText = "Administrator";
+            dataGridView1.Columns[5].HeaderText = "E-mail";
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[1].Width = (int)(dataGridView1.Width * 0.25);
+            dataGridView1.Columns[3].Width = (int)(dataGridView1.Width * 0.25);
+            dataGridView1.Columns[4].Width = 100;
+            dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }
