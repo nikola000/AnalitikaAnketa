@@ -5,6 +5,8 @@ using UnitOfWorkExample.Services.Dto;
 using UnitOfWorkExample.UnitOfWork;
 using UnitOfWorkExample.UnitOfWork.Models;
 using System.Linq;
+using System.Data.Entity;
+using System.ComponentModel;
 
 namespace UnitOfWorkExample.Services
 {
@@ -40,5 +42,20 @@ namespace UnitOfWorkExample.Services
                 return users.Select(user => new UserDto(user.Name)).ToList();
             }
         }
+
+        public BindingList<User> GetUsersDataGrid()
+        {
+            //using (var unitOfWork = _unitOfWorkFactory.Create())
+            //{
+            //    var users = unitOfWork.Repository().All<User>();
+            //    return users.Select(user => new UserDto(user)).ToList();
+            //}
+            using (DatabaseContext db = new DatabaseContext())
+            {
+                var r = db.Users.Local.ToList();
+                return db.Users.Local.ToBindingList();
+            }
+        }
+
     }
 }

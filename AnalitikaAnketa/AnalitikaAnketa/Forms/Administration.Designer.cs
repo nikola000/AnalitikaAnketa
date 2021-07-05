@@ -67,6 +67,7 @@ namespace AnalitikaAnketa.Forms
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Sacuvaj promene";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Administration
             // 

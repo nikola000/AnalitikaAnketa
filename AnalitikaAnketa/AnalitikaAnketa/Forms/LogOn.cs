@@ -16,37 +16,48 @@ namespace AnalitikaAnketa.Forms
     public partial class LogOn : Form
     {
         private readonly IUserService _userService;
-        User _user;
+        UserDto _user;
 
         public LogOn()
         {
             InitializeComponent();
         }
 
-        public LogOn(User user, IUserService userService)
+        public LogOn(UserDto user, IUserService userService)
         {
+            this._user = user;
             this._userService = userService;
-            _user = user;
-            _user = new User();
+            
             InitializeComponent();
         }
 
-        public User getUser()
+        public UserDto getUser()
         {
             return _user;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UserDto user = _userService.CheckUser(tbUser.Text, tbPassword.Text);
-            if (user==null)
+            LogIn();
+        }
+
+        private void tb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                MessageBox.Show("Unet je pogresan username ili password","Neuspelo logovanje",MessageBoxButtons.OK);
+                LogIn();
+            }
+        }
+
+        private void LogIn()
+        {
+            _user = _userService.CheckUser(tbUser.Text, tbPassword.Text);
+            if (_user == null)
+            {
+                MessageBox.Show("Unet je pogresan username ili password", "Neuspelo logovanje", MessageBoxButtons.OK);
             }
             else
             {
-                _user.Name = user.Name;
-                _user.IsAdministrator = user.IsAdministrator;
                 this.Dispose();
             }
         }

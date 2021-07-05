@@ -40,5 +40,10 @@ namespace UnitOfWorkExample.UnitOfWork
         {
             _dbContext.Set<T>().Remove(entity);
         }
+
+        public IEnumerable<T> All<T>() where T : class
+        {
+            return _dbContext.Set<T>().AsQueryable().ToList();
+        }
     }
 }

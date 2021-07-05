@@ -25,15 +25,13 @@ namespace AnalitikaAnketa
 
             ConfigureServices(services);
 
-            services.AddScoped<Form1>();
+            services.AddScoped<AnalitikaAnketa>();
 
             using (ServiceProvider serviceProvider = services.BuildServiceProvider())
             {
-                var form1 = serviceProvider.GetRequiredService<Form1>();
+                var form1 = serviceProvider.GetRequiredService<AnalitikaAnketa>();
                 Application.Run(form1);
             }
-
-            //Application.Run(new Form1());
         }
 
         private static void ConfigureServices(ServiceCollection services)

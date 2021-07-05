@@ -29,14 +29,25 @@ namespace AnalitikaAnketa.Forms
 
         private void Administration_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = _userService.GetUsersDataGrid();
+            SetDataGrid();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             AddNewUser = new AddingUser();
             AddNewUser.ShowDialog();
+            SetDataGrid();
         }
 
+
+        private void SetDataGrid()
+        {
+            dataGridView1.DataSource = _userService.GetUsersDataGrid();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
