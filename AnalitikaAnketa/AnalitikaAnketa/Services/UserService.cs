@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using UnitOfWorkExample.Services.Dto;
 using UnitOfWorkExample.UnitOfWork;
 using UnitOfWorkExample.UnitOfWork.Models;
+using System.Linq;
 
 namespace UnitOfWorkExample.Services
 {
@@ -16,11 +17,11 @@ namespace UnitOfWorkExample.Services
             _unitOfWorkFactory = unitOfWorkFactory;
         }
 
-        public async Task<UserDto> CheckUser(string username, string password)
+        public UserDto CheckUser(string username, string password)
         {
             using (var unitOfWork = _unitOfWorkFactory.Create())
             {
-                var users = await unitOfWork.Repository().FindAsync<User>(x => x.Username == username && x.Password == password);
+                var users = unitOfWork.Repository().Find<User>(x => x.Username == username && x.Password == password);
                 if (users.FirstOrDefault() == null)
                 {
                     return null;
@@ -31,11 +32,11 @@ namespace UnitOfWorkExample.Services
             }
         }
 
-        public async Task<List<UserDto>> GetUsersAsync(string term)
+        public List<UserDto> GetUsersAsync(string term)
         {
             using (var unitOfWork = _unitOfWorkFactory.Create())
             {
-                var users = await unitOfWork.Repository().FindAsync<User>(x => x.Name.Contains(term));
+                var users = unitOfWork.Repository().Find<User>(x => x.Name.Contains(term));
                 return users.Select(user => new UserDto(user.Name)).ToList();
             }
         }

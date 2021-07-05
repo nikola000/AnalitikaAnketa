@@ -6,7 +6,7 @@ namespace UnitOfWorkExample.Services
 {
     public interface IUserService
     {
-        Task<List<UserDto>> GetUsersAsync(string term);
-        Task<UserDto> CheckUser(string username,string password); 
+        List<UserDto> GetUsersAsync(string term);
+        UserDto CheckUser(string username,string password); 
     }
 }
