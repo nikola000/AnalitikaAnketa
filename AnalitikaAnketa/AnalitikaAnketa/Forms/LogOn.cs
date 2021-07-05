@@ -46,6 +46,7 @@ namespace AnalitikaAnketa.Forms
             else
             {
                 _user.Name = user.Name;
+                _user.IsAdministrator = user.IsAdministrator;
                 this.Dispose();
             }
         }
