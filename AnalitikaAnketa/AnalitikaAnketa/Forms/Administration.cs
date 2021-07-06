@@ -46,16 +46,16 @@ namespace AnalitikaAnketa.Forms
         }
         private void InitializeDataGridView() 
         {
-            dataGridView1.Columns[1].HeaderText = "Korisnicko ime";
-            dataGridView1.Columns[3].HeaderText = "Ime";
-            dataGridView1.Columns[4].HeaderText = "Administrator";
-            dataGridView1.Columns[5].HeaderText = "E-mail";
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[1].Width = (int)(dataGridView1.Width * 0.25);
-            dataGridView1.Columns[3].Width = (int)(dataGridView1.Width * 0.25);
-            dataGridView1.Columns[4].Width = 100;
-            dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["Username"].HeaderText = "Korisnicko ime";
+            dataGridView1.Columns["Name"].HeaderText = "Ime";
+            dataGridView1.Columns["IsAdministrator"].HeaderText = "Administrator";
+            dataGridView1.Columns["Mail"].HeaderText = "E-mail";
+            dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.Columns["Password"].Visible = false;
+            dataGridView1.Columns["Username"].Width = (int)(dataGridView1.Width * 0.25);
+            dataGridView1.Columns["Name"].Width = (int)(dataGridView1.Width * 0.25);
+            dataGridView1.Columns["IsAdministrator"].Width = 100;
+            dataGridView1.Columns["Mail"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }
