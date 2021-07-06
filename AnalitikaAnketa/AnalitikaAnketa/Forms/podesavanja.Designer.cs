@@ -1,7 +1,7 @@
 ﻿
 namespace AnalitikaAnketa.Forms
 {
-    partial class podesavanja
+    partial class Podesavanja
     {
         /// <summary>
         /// Required designer variable.

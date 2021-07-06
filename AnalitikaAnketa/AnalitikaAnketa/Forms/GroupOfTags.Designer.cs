@@ -40,19 +40,20 @@ namespace AnalitikaAnketa.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 375);
+            this.dataGridView1.Size = new System.Drawing.Size(396, 239);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(352, 34);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(264, 12);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(144, 23);
             this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Sacuvaj";
+            this.btnSave.Text = "Sacuvaj promene";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -60,11 +61,11 @@ namespace AnalitikaAnketa.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(420, 292);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dataGridView1);
             this.Name = "GroupOfTags";
-            this.Text = "GroupOfTags";
+            this.Text = "Grupa tagova";
             this.Load += new System.EventHandler(this.GroupOfTags_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

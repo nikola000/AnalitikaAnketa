@@ -14,6 +14,7 @@ namespace AnalitikaAnketa
         Administration frmAdmin;
         Tagovi frmtag;
         GroupOfTags frmGroup;
+        Podesavanja frmPodesavanja;
         public AnalitikaAnketa(IUserService userService)
         {
             this._userService = userService;
@@ -63,7 +64,11 @@ namespace AnalitikaAnketa
             {
                 frmtag = new Tagovi();
                 frmtag.ShowDialog();
-
+            }
+            if (e.ClickedItem.Name == podesavanjaToolStripMenuItem.Name)
+            {
+                frmPodesavanja = new Podesavanja();
+                frmPodesavanja.ShowDialog();
             }
         }
 

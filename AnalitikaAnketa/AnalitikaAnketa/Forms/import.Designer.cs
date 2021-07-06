@@ -67,16 +67,16 @@ namespace AnalitikaAnketa.Forms
             this.txtIzborFajla.Size = new System.Drawing.Size(419, 23);
             this.txtIzborFajla.TabIndex = 3;
             // 
-            // import
+            // Import
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(736, 372);
             this.Controls.Add(this.txtIzborFajla);
             this.Controls.Add(this.bUcitaj);
             this.Controls.Add(this.button1);
-            this.Name = "import";
+            this.Name = "Import";
             this.Text = "import";
             this.ResumeLayout(false);
             this.PerformLayout();

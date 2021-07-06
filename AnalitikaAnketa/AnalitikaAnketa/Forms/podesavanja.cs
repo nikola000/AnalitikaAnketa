@@ -4,32 +4,20 @@ using System.Windows.Forms;
 
 namespace AnalitikaAnketa.Forms
 {
-    public partial class podesavanja : Form
+    public partial class Podesavanja : Form
     {
-        public podesavanja()
+        public Podesavanja()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
             FileStream stream = new FileStream("file11.txt", FileMode.Create, FileAccess.Write);
             StreamWriter writer = new StreamWriter(stream);
             writer.WriteLine(textBox1.Text);
             writer.Close();
             stream.Close();
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void podesavanja_Load(object sender, EventArgs e)
@@ -43,8 +31,6 @@ namespace AnalitikaAnketa.Forms
                     string data = sr.ReadLine();
 
                     textBox1.Text = data;
-
-
                 }
             }
             catch 
@@ -54,11 +40,7 @@ namespace AnalitikaAnketa.Forms
                 writer.WriteLine(textBox1.Text);
                 writer.Close();
                 stream.Close();
-
-
             }
-
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
