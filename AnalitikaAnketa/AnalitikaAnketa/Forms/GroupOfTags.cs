@@ -28,6 +28,17 @@ namespace AnalitikaAnketa.Forms
         {
             context.Groups.Load();
             dataGridView1.DataSource = context.Groups.Local.ToBindingList();
+            dataGridView1.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            int result = context.SaveChanges();
+
+            if (result > 0)
+            {
+                MessageBox.Show("Izmene su uspesno sacuvane");
+            }
         }
     }
 }
