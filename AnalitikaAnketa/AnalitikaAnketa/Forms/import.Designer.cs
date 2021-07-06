@@ -1,7 +1,7 @@
 ﻿
 namespace AnalitikaAnketa.Forms
 {
-    partial class import
+    partial class Import
     {
         /// <summary>
         /// Required designer variable.

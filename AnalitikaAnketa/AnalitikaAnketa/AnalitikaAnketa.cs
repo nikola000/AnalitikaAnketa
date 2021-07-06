@@ -10,7 +10,7 @@ namespace AnalitikaAnketa
         private readonly IUserService _userService;
         LogOn frm2;
         User user;
-        import frm3;
+        Import frm3;
         Administration frmAdmin;
         Tagovi frmtag;
         GroupOfTags frmGroup;
@@ -36,7 +36,7 @@ namespace AnalitikaAnketa
                     if (user != null)
                     {
                         toolStripStatusLabelLogin.Text = "Ulogovan: " + user.Name;
-                        
+
                         if (user.IsAdministrator == true)
                         {
                             tsmiAdministrator.Visible = true;
@@ -46,7 +46,7 @@ namespace AnalitikaAnketa
             }
             if (e.ClickedItem.Name == ToolStripMenuItem2.Name)
             {
-                frm3 = new import();
+                frm3 = new Import();
                 frm3.ShowDialog();
             }
             if (e.ClickedItem.Name == tsmiAdministrator.Name)
@@ -63,23 +63,9 @@ namespace AnalitikaAnketa
             {
                 frmtag = new Tagovi();
                 frmtag.ShowDialog();
-            
+
             }
         }
 
-        private void tsmiAdministrator_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void grupaTagovaToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void AnalitikaAnketa_Load(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }

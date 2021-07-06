@@ -47,7 +47,7 @@ namespace AnalitikaAnketa
             this.toolStripMenuItem1,
             this.ToolStripMenuItem2,
             this.tsmiAdministrator,
-            this.tsmiGroupOfTags});
+            this.tsmiGroupOfTags,
             this.grupaTagovaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -74,14 +74,12 @@ namespace AnalitikaAnketa
             this.tsmiAdministrator.Size = new System.Drawing.Size(64, 20);
             this.tsmiAdministrator.Text = "Korisnici";
             this.tsmiAdministrator.Visible = false;
-            this.tsmiAdministrator.Click += new System.EventHandler(this.tsmiAdministrator_Click);
             // 
             // grupaTagovaToolStripMenuItem
             // 
             this.grupaTagovaToolStripMenuItem.Name = "grupaTagovaToolStripMenuItem";
             this.grupaTagovaToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.grupaTagovaToolStripMenuItem.Text = "Grupa tagova";
-            this.grupaTagovaToolStripMenuItem.Click += new System.EventHandler(this.grupaTagovaToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -114,7 +112,6 @@ namespace AnalitikaAnketa
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AnalitikaAnketa";
             this.Text = "Analitika anketa";
-            this.Load += new System.EventHandler(this.AnalitikaAnketa_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

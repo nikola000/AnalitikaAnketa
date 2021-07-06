@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AnalitikaAnketa.Forms
 {
-    public partial class import : Form
+    public partial class Import : Form
     {
-        public import()
+        public Import()
         {
             InitializeComponent();
         }
