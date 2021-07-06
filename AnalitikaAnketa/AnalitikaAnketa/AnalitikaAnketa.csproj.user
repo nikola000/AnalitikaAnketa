@@ -10,7 +10,7 @@
     <Compile Update="Forms\Administration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\grupaTagova.cs">
+    <Compile Update="Forms\Tagovi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Import.cs">

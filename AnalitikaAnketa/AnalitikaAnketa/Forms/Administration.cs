@@ -43,5 +43,10 @@ namespace AnalitikaAnketa.Forms
                 MessageBox.Show("Izmene su uspesno sacuvane");
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
