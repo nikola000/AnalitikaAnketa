@@ -12,7 +12,7 @@ namespace AnalitikaAnketa
         User user;
         import frm3;
         Administration frmAdmin;
-
+        GroupOfTags frmGroup;
         public AnalitikaAnketa(IUserService userService)
         {
             this._userService = userService;
@@ -52,6 +52,11 @@ namespace AnalitikaAnketa
             {
                 frmAdmin = new Administration();
                 frmAdmin.ShowDialog();
+            }
+            if (e.ClickedItem.Name == tsmiGroupOfTags.Name)
+            {
+                frmGroup = new GroupOfTags();
+                frmGroup.ShowDialog();
             }
         }
     }

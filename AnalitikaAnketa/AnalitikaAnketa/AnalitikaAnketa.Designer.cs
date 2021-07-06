@@ -35,6 +35,7 @@ namespace AnalitikaAnketa
             this.tsmiAdministrator = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsmiGroupOfTags = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +45,8 @@ namespace AnalitikaAnketa
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.ToolStripMenuItem2,
-            this.tsmiAdministrator});
+            this.tsmiAdministrator,
+            this.tsmiGroupOfTags});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -86,6 +88,12 @@ namespace AnalitikaAnketa
             this.toolStripStatusLabelLogin.Name = "toolStripStatusLabelLogin";
             this.toolStripStatusLabelLogin.Size = new System.Drawing.Size(0, 17);
             // 
+            // tsmiGroupOfTags
+            // 
+            this.tsmiGroupOfTags.Name = "tsmiGroupOfTags";
+            this.tsmiGroupOfTags.Size = new System.Drawing.Size(90, 20);
+            this.tsmiGroupOfTags.Text = "Grupa tagova";
+            // 
             // AnalitikaAnketa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -112,6 +120,7 @@ namespace AnalitikaAnketa
         private System.Windows.Forms.ToolStripMenuItem tsmiAdministrator;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLogin;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGroupOfTags;
     }
 }
 
