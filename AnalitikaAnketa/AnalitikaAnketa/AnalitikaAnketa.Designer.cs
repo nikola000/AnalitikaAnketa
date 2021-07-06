@@ -37,6 +37,7 @@ namespace AnalitikaAnketa
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsmiGroupOfTags = new System.Windows.Forms.ToolStripMenuItem();
+            this.podesavanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@ namespace AnalitikaAnketa
             this.toolStripMenuItem1,
             this.ToolStripMenuItem2,
             this.tsmiAdministrator,
+            this.podesavanjaToolStripMenuItem,
             this.tsmiGroupOfTags,
             this.grupaTagovaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -91,6 +93,13 @@ namespace AnalitikaAnketa
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // podešavanjaToolStripMenuItem
+            // 
+            this.podesavanjaToolStripMenuItem.Name = "podesavanjaToolStripMenuItem";
+            this.podešavanjaToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.podešavanjaToolStripMenuItem.Text = "Podešavanja";
+            this.podešavanjaToolStripMenuItem.Click += new System.EventHandler(this.podešavanjaToolStripMenuItem_Click);
+            // 
             // toolStripStatusLabelLogin
             // 
             this.toolStripStatusLabelLogin.Name = "toolStripStatusLabelLogin";
@@ -130,6 +139,7 @@ namespace AnalitikaAnketa
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLogin;
         private System.Windows.Forms.ToolStripMenuItem tsmiGroupOfTags;
         private System.Windows.Forms.ToolStripMenuItem grupaTagovaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem podesavanjaToolStripMenuItem;
     }
 }
 
