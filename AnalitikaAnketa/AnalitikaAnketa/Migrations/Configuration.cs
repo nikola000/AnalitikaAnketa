@@ -1,18 +1,16 @@
-﻿namespace AnalitikaAnketa.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+﻿using System.Data.Entity.Migrations;
+using UnitOfWorkExample.UnitOfWork;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<UnitOfWorkExample.UnitOfWork.DatabaseContext>
+namespace AnalitikaAnketa.Migrations
+{
+    internal sealed class Configuration : DbMigrationsConfiguration<DatabaseContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(UnitOfWorkExample.UnitOfWork.DatabaseContext context)
+        protected override void Seed(DatabaseContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -96,9 +96,8 @@ namespace AnalitikaAnketa
             // podešavanjaToolStripMenuItem
             // 
             this.podesavanjaToolStripMenuItem.Name = "podesavanjaToolStripMenuItem";
-            this.podešavanjaToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.podešavanjaToolStripMenuItem.Text = "Podešavanja";
-            this.podešavanjaToolStripMenuItem.Click += new System.EventHandler(this.podešavanjaToolStripMenuItem_Click);
+            this.podesavanjaToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.podesavanjaToolStripMenuItem.Text = "Podešavanja";
             // 
             // toolStripStatusLabelLogin
             // 
