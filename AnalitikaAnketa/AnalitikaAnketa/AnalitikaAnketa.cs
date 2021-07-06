@@ -12,7 +12,7 @@ namespace AnalitikaAnketa
         User user;
         import frm3;
         Administration frmAdmin;
-
+        grupaTagova frmtag;
         public AnalitikaAnketa(IUserService userService)
         {
             this._userService = userService;
@@ -53,6 +53,27 @@ namespace AnalitikaAnketa
                 frmAdmin = new Administration();
                 frmAdmin.ShowDialog();
             }
+            if (e.ClickedItem.Name == grupaTagovaToolStripMenuItem.Name)
+            {
+                frmtag = new grupaTagova();
+                frmtag.ShowDialog();
+            
+            }
+        }
+
+        private void tsmiAdministrator_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void grupaTagovaToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void AnalitikaAnketa_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

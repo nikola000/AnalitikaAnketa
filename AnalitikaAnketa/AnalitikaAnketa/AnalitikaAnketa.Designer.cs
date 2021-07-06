@@ -33,6 +33,7 @@ namespace AnalitikaAnketa
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAdministrator = new System.Windows.Forms.ToolStripMenuItem();
+            this.grupaTagovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
@@ -44,7 +45,8 @@ namespace AnalitikaAnketa
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.ToolStripMenuItem2,
-            this.tsmiAdministrator});
+            this.tsmiAdministrator,
+            this.grupaTagovaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -70,6 +72,14 @@ namespace AnalitikaAnketa
             this.tsmiAdministrator.Size = new System.Drawing.Size(64, 20);
             this.tsmiAdministrator.Text = "Korisnici";
             this.tsmiAdministrator.Visible = false;
+            this.tsmiAdministrator.Click += new System.EventHandler(this.tsmiAdministrator_Click);
+            // 
+            // grupaTagovaToolStripMenuItem
+            // 
+            this.grupaTagovaToolStripMenuItem.Name = "grupaTagovaToolStripMenuItem";
+            this.grupaTagovaToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.grupaTagovaToolStripMenuItem.Text = "Grupa tagova";
+            this.grupaTagovaToolStripMenuItem.Click += new System.EventHandler(this.grupaTagovaToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -96,6 +106,7 @@ namespace AnalitikaAnketa
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AnalitikaAnketa";
             this.Text = "Analitika anketa";
+            this.Load += new System.EventHandler(this.AnalitikaAnketa_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -112,6 +123,7 @@ namespace AnalitikaAnketa
         private System.Windows.Forms.ToolStripMenuItem tsmiAdministrator;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLogin;
+        private System.Windows.Forms.ToolStripMenuItem grupaTagovaToolStripMenuItem;
     }
 }
 
