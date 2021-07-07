@@ -19,7 +19,7 @@ namespace UnitOfWorkExample.UnitOfWork
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            // Add your model configuration here
+            // Add your model configuration here            
         }
     }
 }
