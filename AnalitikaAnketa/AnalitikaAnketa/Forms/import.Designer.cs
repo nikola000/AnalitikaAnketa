@@ -33,6 +33,8 @@ namespace AnalitikaAnketa.Forms
             this.openFD = new System.Windows.Forms.OpenFileDialog();
             this.bUcitaj = new System.Windows.Forms.Button();
             this.txtIzborFajla = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -52,7 +54,7 @@ namespace AnalitikaAnketa.Forms
             // 
             // bUcitaj
             // 
-            this.bUcitaj.Location = new System.Drawing.Point(582, 39);
+            this.bUcitaj.Location = new System.Drawing.Point(582, 38);
             this.bUcitaj.Name = "bUcitaj";
             this.bUcitaj.Size = new System.Drawing.Size(117, 23);
             this.bUcitaj.TabIndex = 2;
@@ -67,17 +69,32 @@ namespace AnalitikaAnketa.Forms
             this.txtIzborFajla.Size = new System.Drawing.Size(419, 23);
             this.txtIzborFajla.TabIndex = 3;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 77);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(665, 272);
+            this.dataGridView1.TabIndex = 4;
+            // 
             // Import
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(736, 372);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtIzborFajla);
             this.Controls.Add(this.bUcitaj);
             this.Controls.Add(this.button1);
             this.Name = "Import";
-            this.Text = "import";
+            this.Text = "Import";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,5 +105,6 @@ namespace AnalitikaAnketa.Forms
         private System.Windows.Forms.OpenFileDialog openFD;
         private System.Windows.Forms.Button bUcitaj;
         private System.Windows.Forms.TextBox txtIzborFajla;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
