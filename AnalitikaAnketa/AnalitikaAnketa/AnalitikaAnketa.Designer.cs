@@ -108,7 +108,7 @@ namespace AnalitikaAnketa
             // 
             this.tsmiGroupOfTags.Name = "tsmiGroupOfTags";
             this.tsmiGroupOfTags.Size = new System.Drawing.Size(90, 20);
-            this.tsmiGroupOfTags.Text = "Grupa tagova";
+            this.tsmiGroupOfTags.Text = "Tagovi";
             // 
             // AnalitikaAnketa
             // 
