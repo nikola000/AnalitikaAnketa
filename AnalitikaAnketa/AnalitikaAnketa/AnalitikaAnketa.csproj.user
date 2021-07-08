@@ -16,13 +16,13 @@
     <Compile Update="Forms\Tagovi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Import.cs">
+    <Compile Update="Forms\import.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\LogOn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Podesavanja.cs">
+    <Compile Update="Forms\podesavanja.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
