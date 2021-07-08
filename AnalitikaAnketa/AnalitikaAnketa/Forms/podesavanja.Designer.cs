@@ -40,7 +40,6 @@ namespace AnalitikaAnketa.Forms
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(338, 23);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -65,7 +64,6 @@ namespace AnalitikaAnketa.Forms
             this.Controls.Add(this.textBox1);
             this.Name = "podesavanja";
             this.Text = "podesavanja";
-            this.Load += new System.EventHandler(this.podesavanja_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace AnalitikaAnketa.Forms
@@ -9,43 +10,33 @@ namespace AnalitikaAnketa.Forms
         public Podesavanja()
         {
             InitializeComponent();
+            UcitajFajl();
+        }
+
+        private void UcitajFajl()
+        {
+            using (FileStream fs = File.OpenRead("config.db"))
+            {
+                byte[] b = new byte[1024];
+                UTF8Encoding temp = new UTF8Encoding(true);
+                while (fs.Read(b, 0, b.Length) > 0)
+                {
+                    textBox1.Text = temp.GetString(b);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FileStream stream = new FileStream("file11.txt", FileMode.Create, FileAccess.Write);
-            StreamWriter writer = new StreamWriter(stream);
-            writer.WriteLine(textBox1.Text);
-            writer.Close();
-            stream.Close();
-        }
-
-        private void podesavanja_Load(object sender, EventArgs e)
-        {
-
-            try
+            using (FileStream fs = File.Create("config.db"))
             {
-                StreamReader sr = new StreamReader("file11.txt");
-                if (sr != null)
-                {
-                    string data = sr.ReadLine();
-
-                    textBox1.Text = data;
-                }
-            }
-            catch 
-            {
-                FileStream stream = new FileStream("file11.txt", FileMode.Create, FileAccess.Write);
-                StreamWriter writer = new StreamWriter(stream);
-                writer.WriteLine(textBox1.Text);
-                writer.Close();
-                stream.Close();
+                AddText(fs, textBox1.Text);
             }
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private static void AddText(FileStream fs, string value)
         {
-
+            byte[] info = new UTF8Encoding(true).GetBytes(value);
+            fs.Write(info, 0, info.Length);
         }
     }
 }
