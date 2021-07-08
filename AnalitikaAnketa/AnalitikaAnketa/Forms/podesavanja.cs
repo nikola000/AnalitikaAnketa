@@ -11,6 +11,14 @@ namespace AnalitikaAnketa.Forms
         {
             InitializeComponent();
             UcitajFajl();
+            ZameniTekstFajla();
+        }
+
+        private void ZameniTekstFajla()
+        {
+            string text = File.ReadAllText("config.db");
+            text = text.Replace("config.db", textBox1.Text);
+            File.WriteAllText("config.db", textBox1.Text);
         }
 
         private void UcitajFajl()
