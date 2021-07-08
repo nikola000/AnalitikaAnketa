@@ -16,12 +16,12 @@ namespace AnalitikaAnketa.Forms
 
         private void grupaTagova_Load(object sender, EventArgs e)
         {
-
+            context.Tags.Include(x => x.Group).Load();
             SetDataGrid();
         }
         private void SetDataGrid()
         {
-            context.Tags.Load();
+            
             dataGridView1.DataSource = context.Tags.Local.ToBindingList();
             dataGridView1.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
