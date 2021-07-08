@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnitOfWorkExample.UnitOfWork;
 
@@ -22,11 +15,11 @@ namespace AnalitikaAnketa.Forms
 
         private void GroupOfTags_Load(object sender, EventArgs e)
         {
+            context.Groups.Include(x => x.Tags).Load();
             SetDataGrid();
         }
         private void SetDataGrid()
         {
-            context.Groups.Load();
             dataGridView1.DataSource = context.Groups.Local.ToBindingList();
             dataGridView1.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
