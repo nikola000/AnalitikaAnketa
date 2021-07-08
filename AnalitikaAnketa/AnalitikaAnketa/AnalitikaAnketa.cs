@@ -60,7 +60,7 @@ namespace AnalitikaAnketa
                 frmGroup = new GroupOfTags();
                 frmGroup.ShowDialog();
             }
-            if (e.ClickedItem.Name == grupaTagovaToolStripMenuItem.Name)
+            if (e.ClickedItem.Name == tagsToolStripMenuItem.Name)
             {
                 frmtag = new Tagovi();
                 frmtag.ShowDialog();

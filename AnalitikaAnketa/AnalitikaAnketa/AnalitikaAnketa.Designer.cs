@@ -33,7 +33,7 @@ namespace AnalitikaAnketa
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAdministrator = new System.Windows.Forms.ToolStripMenuItem();
-            this.grupaTagovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tagsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelLogin = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsmiGroupOfTags = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +50,7 @@ namespace AnalitikaAnketa
             this.tsmiAdministrator,
             this.podesavanjaToolStripMenuItem,
             this.tsmiGroupOfTags,
-            this.grupaTagovaToolStripMenuItem});
+            this.tagsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -77,11 +77,11 @@ namespace AnalitikaAnketa
             this.tsmiAdministrator.Text = "Korisnici";
             this.tsmiAdministrator.Visible = false;
             // 
-            // grupaTagovaToolStripMenuItem
+            // tagsToolStripMenuItem
             // 
-            this.grupaTagovaToolStripMenuItem.Name = "grupaTagovaToolStripMenuItem";
-            this.grupaTagovaToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.grupaTagovaToolStripMenuItem.Text = "Grupa tagova";
+            this.tagsToolStripMenuItem.Name = "tagsToolStripMenuItem";
+            this.tagsToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.tagsToolStripMenuItem.Text = "Tagovi";
             // 
             // statusStrip1
             // 
@@ -108,7 +108,7 @@ namespace AnalitikaAnketa
             // 
             this.tsmiGroupOfTags.Name = "tsmiGroupOfTags";
             this.tsmiGroupOfTags.Size = new System.Drawing.Size(90, 20);
-            this.tsmiGroupOfTags.Text = "Tagovi";
+            this.tsmiGroupOfTags.Text = "Grupe tagova";
             // 
             // AnalitikaAnketa
             // 
@@ -137,7 +137,7 @@ namespace AnalitikaAnketa
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLogin;
         private System.Windows.Forms.ToolStripMenuItem tsmiGroupOfTags;
-        private System.Windows.Forms.ToolStripMenuItem grupaTagovaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tagsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem podesavanjaToolStripMenuItem;
     }
 }
